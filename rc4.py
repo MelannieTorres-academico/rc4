@@ -5,8 +5,8 @@
 # https://github.com/bozhu/RC4-Python/blob/master/rc4.py
 import fileinput
 
-#recives a string key 
-#returns a list S
+#recives a string key
+#returns a list S 
 def ksa(key):
     S = []
     for i  in range(256):
