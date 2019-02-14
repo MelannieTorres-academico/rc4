@@ -6,7 +6,7 @@
 import fileinput
 
 #recives a string key
-#returns a list S 
+#returns a list S
 def ksa(key):
     S = []
     for i  in range(256):
@@ -42,9 +42,9 @@ def rc4(message, stream):
     ciphertext = ''
     for word in message:
         for letter in word:
-            ciphertext += int_to_hex(xor(letter, stream.__next__()))
             if(letter == "\n"):
                 return ciphertext
+            ciphertext += int_to_hex(xor(letter, stream.__next__()))
     return ciphertext
 
 #transforms an int into a formatted hex
